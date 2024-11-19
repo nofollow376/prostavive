@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Nagano Tonic's premium content. Learn about our Privacy Policy, Disclaimer, and Terms & Conditions.">
+    <meta name="keywords" content="Nagano Tonic, Tonic Content, Privacy Policy, Disclaimer, Terms & Conditions">
+    <meta name="author" content="Nagano Tonic">
+    <title>Nagano Tonic - Discover Premium Content</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent page scroll */
+        }
+
+        /* Wrapper for the scrollable background */
+        .scrollable-background {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            overflow-y: scroll; /* Enable vertical scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        }
+
+        /* Hide both backgrounds by default */
+        .scrollable-background.pc,
+        .scrollable-background.mobile {
+            display: none;
+        }
+
+        /* Show PC background on larger screens */
+        @media (min-width: 768px) {
+            .scrollable-background.pc {
+                display: block;
+            }
+        }
+
+        /* Show mobile background on smaller screens */
+        @media (max-width: 767px) {
+            .scrollable-background.mobile {
+                display: block;
+            }
+        }
+
+        /* Background images */
+        .scrollable-background img {
+            width: 100%; /* Make image fill its container */
+            alt: "Nagano Tonic Background Image";
+        }
+
+        /* Footer container */
+        .footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Centered fixed foreground image */
+        .fixed-center {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            border-radius: 20px; /* Add rounded corners to the image */
+            overflow: hidden; /* Ensures the image is clipped inside the rounded corners */
+        }
+
+        .fixed-center img {
+            width: 100%; /* Full width inside container */
+            max-width: 400px; /* Restrict max width to 400px */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Footer text links */
+        .footer a {
+            color: #f4b400; /* Highlight link */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for clickable text links in footer */
+        .footer .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer .footer-links a {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scrollable background for PC -->
+    <div class="scrollable-background pc">
+        <a href="https://www.google.com">
+            <img src="nagano-pc-1.webp" alt="Nagano Tonic PC Background" loading="lazy">
+        </a>
+
+        <!-- Footer for PC -->
+        <div class="footer">
+            <p>Nagano Tonic Content © 2024. Visit <a href="https://www.google.com">Nagano Tonic</a> for more info.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Nagano Tonic Privacy Policy</a>
+                <a href="disclaimer.html">Nagano Tonic Disclaimer</a>
+                <a href="terms-conditions.html">Nagano Tonic Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollable background for mobile -->
+    <div class="scrollable-background mobile">
+        <a href="https://www.google.com">
+            <img src="nagano-smatphone-1.webp" alt="Nagano Tonic Mobile Background" loading="lazy">
+        </a>
+
+        <!-- Footer for Mobile -->
+        <div class="footer">
+            <p>Nagano Tonic Content © 2024. Visit <a href="https://www.google.com">Nagano Tonic</a> for more info.</p>
+            <div class="footer-links">
+               <a href="privacy-policy.html">Nagano Tonic Privacy Policy</a>
+               <a href="disclaimer.html">Nagano Tonic Disclaimer</a>
+               <a href="terms-conditions.html">Nagano Tonic Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed center image -->
+    <div class="fixed-center">
+        <a href="https://www.google.com">
+            <img src="Cookie-Policy.webp" alt="Nagano Tonic Cookie Policy" loading="lazy">
+        </a>
+    </div>
+
+    <!-- Lazy-loaded Google Ads script -->
+    <script>
+        // Lazy-load Google Ads only when user scrolls
+        document.addEventListener('scroll', function lazyLoadGoogleAds() {
+            const adsScript = document.createElement('script');
+            adsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXX'; // Replace with your Google Ads script
+            adsScript.async = true;
+            document.head.appendChild(adsScript);
+
+            // Initialize Google Ads tracking
+            adsScript.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'AW-XXXXXXXX'); // Replace with your Google Ads ID
+            };
+
+            // Remove the event listener after loading
+            document.removeEventListener('scroll', lazyLoadGoogleAds);
+        });
+    </script>
+</body>
+</html>
